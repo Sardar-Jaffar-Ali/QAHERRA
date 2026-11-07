@@ -1,0 +1,44 @@
+shared:
+  chunk_characters: 1600
+  chunk_overlap: 250
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  embedding_dimension: 384
+  generator: gpt-4o-mini
+  temperature: 0.0
+  final_evidence_count: 10
+
+no_rag:
+  candidate_discovery: none
+  query: none
+  reranker: none
+
+bm25:
+  candidate_discovery: global_bm25
+  query: question_only
+  bm25_depth: 10
+  reranker: none
+
+tspec_llm:
+  candidate_discovery: global_dense_faiss
+  query: question_only
+  dense_depth: 10
+  reranker: none
+
+chat3gpp:
+  candidate_discovery: global_bm25_and_dense_faiss
+  query: question_only
+  bm25_depth: 50
+  dense_depth: 50
+  fusion: reciprocal_rank_fusion
+  rrf_constant: 60.0
+  bm25_weight: 1.0
+  dense_weight: 1.0
+  reranker: none
+
+telco_rag:
+  series_router: original_neural_router
+  routed_series_count: 5
+  query_enhancement: glossary_and_candidate_answers
+  first_retrieval_depth: 10
+  second_retrieval_depth: 10
+  online_search: false

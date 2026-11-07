@@ -1,0 +1,6 @@
+configuration,R@1,R@5,R@10,R@20
+"Dense, unadapted encoder",16.44,28.87,31.93,36.52
+"Dense, adapted encoder",19.12,31.17,34.80,37.86
+BM25 + unadapted dense,25.62,41.87,47.23,51.24
+BM25 + adapted dense,26.00,41.49,47.23,52.01
++ table boost (QAHERRA),25.81,41.30,47.23,52.01

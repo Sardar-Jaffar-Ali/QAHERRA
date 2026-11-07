@@ -1,0 +1,7 @@
+quantity,value,unit,note
+teleqna_units_context_chars,10464.57,characters,"evidence units, no deduplication"
+teleqna_dedup_context_chars,11095.46,characters,"deduplicated evidence units, about 6% more"
+teleqna_dedup_prompt_tokens,2906,tokens,"deduplicated evidence units"
+teleqna_chunks_prompt_tokens,3485,tokens,"fixed-size chunks, uncapped"
+teleqna_chunks_capped_prompt_tokens,2644,tokens,"fixed-size chunks, capped at the evidence-unit mean"
+dedup_vs_chunks_prompt_token_change_pct,-16.6,percent,"reported in the paper as about 17% fewer"

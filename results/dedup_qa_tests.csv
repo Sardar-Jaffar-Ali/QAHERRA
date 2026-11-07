@@ -1,0 +1,4 @@
+comparison,n,dedup_units,other,difference,ci_low,ci_high,p_holm,note
+"dedup units vs units, no deduplication",2000,75.30,73.60,1.70,0.55,2.85,0.017,"the deduplication gain reported in Section V-D"
+"dedup units vs chunks",2000,75.30,75.60,-0.30,,,1.000,"statistically indistinguishable; the chunk-over-unit CI reaches 1.85"
+"dedup units vs chunks, capped context",2000,75.30,75.15,0.15,,,1.000,"capping the chunk context removes the chunk advantage"

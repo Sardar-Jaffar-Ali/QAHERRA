@@ -1,0 +1,11 @@
+metric,qsmall_question_only,qsmall_option,teleqna_question_only,teleqna_option
+accuracy_percent,78.00,79.00,74.20,74.85
+p_holm,,1.00,,0.78
+same_top1_evidence_percent,71.00,71.00,43.75,43.75
+identical_top10_ranking_percent,2.00,2.00,0.30,0.30
+mean_top10_overlap_units,8.61,8.61,8.13,8.13
+retrieval_latency_seconds,0.459,0.459,0.475,0.475
+cross_encoder_latency_seconds,0.162,0.168,0.178,0.186
+generator_latency_seconds,0.816,0.713,0.870,0.702
+end_to_end_latency_seconds,1.437,1.341,1.523,1.363
+generator_input_tokens,279075,278144,5260847,5236875

@@ -1,0 +1,61 @@
+seed: 42
+
+corpus:
+  releases: [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+  text_chunk_characters: 1600
+  text_chunk_overlap: 250
+  evidence_columns: [doc_id, evidence_type, section_path, text]
+  expected_evidence_units: 2396136
+  expected_text_units: 1683800
+  expected_table_units: 712336
+
+dense:
+  base_model: sentence-transformers/all-MiniLM-L6-v2
+  embedding_dimension: 384
+  normalize_embeddings: true
+  domain_adaptation_epochs: 5
+  domain_adaptation_batch_size: 16
+
+retrieval:
+  bm25_depth: 100
+  dense_depth: 100
+  pool_size: 100
+  rrf_constant: 5.0
+  bm25_weight: 1.0
+  dense_weight: 0.25
+  table_boost: 0.15
+
+reranking:
+  candidate_count: 20
+  final_evidence_count: 10
+  model: cross-encoder/ms-marco-MiniLM-L6-v2
+  max_length: 512
+  batch_size: 32
+
+generation:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.0
+  max_context_characters: 14000
+  save_after_each_question: true
+
+table_gate:
+  type: keyword
+  patterns:
+    - table
+    - column
+    - row
+    - field
+    - parameter
+    - information element
+    - header
+    - bit
+    - octet
+    - byte
+    - status code
+    - cause code
+    - mapping
+    - enumerated
+    - allowed values
+    - possible values
+

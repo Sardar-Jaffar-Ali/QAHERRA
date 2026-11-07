@@ -1,0 +1,9 @@
+quantity,value
+original_units,2396136
+deduplicated_units,740002
+removed_units,1656134
+duplicate_percent,69.1
+four_document_units,865
+full_corpus_chunks,833353
+four_document_chunks,434
+mean_duplicate_slots_per_top10,4.1205

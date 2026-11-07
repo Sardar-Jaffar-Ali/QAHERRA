@@ -1,0 +1,51 @@
+# Copy to configs/paths.yaml and replace every value with a local path.
+# configs/paths.yaml is ignored by git, so no local path is ever committed.
+
+# ---------------------------------------------------------------- source data
+evidence_csv: /path/to/evidence_units_full.csv
+qsmall: /path/to/Sampled_3GPP_TR_Questions.json
+teleqna: /path/to/teleqna_standards_subset.csv
+telcodpr_cache: /path/to/telcodpr_cache
+telcodpr_per_query: /path/to/retrieval_per_query_523.jsonl
+
+# ------------------------------------------------------------ models, indexes
+domain_model: /path/to/finetuned_model
+bm25_index: /path/to/bm25_index_full
+dense_faiss: /path/to/eu_embeddings_full_ft_normalized_faiss.index
+base_dense_faiss: /path/to/base_dense_normalized_faiss.index
+four_doc_bm25_index: /path/to/qsmall_4docs_bm25
+four_doc_base_dense_faiss: /path/to/qsmall_4docs_base.faiss
+four_doc_domain_dense_faiss: /path/to/qsmall_4docs_domain.faiss
+four_doc_evidence_csv: /path/to/qsmall_4docs_evidence.csv
+
+# ------------------------------------- fixed-size chunk collection (4 docs)
+# The chunk text is read from these metadata files, not from the chunk store.
+# See docs/CHUNK_LOOKUP_FIX.md.
+four_doc_chunk_metadata: /path/to/faiss_qsmall_4docs/qsmall_4docs_metadata.pkl
+four_doc_chunk_bm25_metadata: /path/to/qsmall_4docs_bm25/metadata.pkl
+chunk_metadata_db: /path/to/chunk_metadata.db
+
+# ------------------------------------------------------- deduplication stages
+dedup_output_dir: /path/to/dedup_outputs
+dedup_work_dir: /path/to/dedup_work          # local scratch, text shards
+
+# ---------------------------- per-question result files used by verification
+# Table III, four-document column
+qsmall_4doc_bm25_units_results: /path/to/v2_bm25_qsmall_4doc.csv
+qsmall_4doc_dense_units_results: /path/to/v2_dense_qsmall_4doc.csv
+qsmall_4doc_bm25_chunks_results: /path/to/bm25_chunks_4doc_fixed.csv
+qsmall_4doc_dense_chunks_results: /path/to/dense_chunks_4doc_fixed.csv
+qsmall_4doc_qaherra_qonly_results: /path/to/OSCAR_4DOC_QONLY/FINAL_RESULTS.csv
+# Table III, full-corpus Q-small column
+qsmall_full_bm25_units_results: /path/to/qsmall_full_bm25_units.csv
+qsmall_full_bm25_chunks_results: /path/to/qsmall_full_bm25_chunks.jsonl
+qsmall_full_qaherra_qonly_results: /path/to/qsmall/OSCAR_V3_QONLY/FINAL_RESULTS.csv
+# Table III, TeleQnA column
+teleqna_bm25_units_results: /path/to/teleqna/OSCAR_V3_BM25_ONLY/FINAL_RESULTS.csv
+teleqna_bm25_chunks_results: /path/to/bm25_teleqna_full.jsonl
+teleqna_bm25_chunks_capped_results: /path/to/bm25_teleqna_full_c10500.jsonl
+teleqna_qaherra_qonly_results: /path/to/teleqna/OSCAR_V3_QONLY/FINAL_RESULTS.csv
+teleqna_dedup_units_results: /path/to/bm25dedup_teleqna_full.jsonl
+
+# ------------------------------------------------------------------- outputs
+output_dir: /path/to/outputs

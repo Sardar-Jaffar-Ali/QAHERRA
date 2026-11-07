@@ -1,0 +1,16 @@
+You are answering a multiple-choice telecom standards question.
+Use the SOURCES to choose the single best option.
+
+Return ONLY the option letter. No explanation.
+
+SOURCES:
+{context}
+
+QUESTION:
+{question}
+
+OPTIONS:
+{options}
+
+Answer (letter only):
+

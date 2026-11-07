@@ -1,0 +1,31 @@
+configuration,representation,benchmark,scope,questions,accuracy,source
+No-RAG,none,Q-small,four documents,100,40.00,per-question file
+No-RAG,none,Q-small,full corpus,100,40.00,per-question file
+No-RAG,none,TeleQnA,full corpus,2000,60.50,per-question file
+BM25,evidence units,Q-small,four documents,100,84.00,per-question file
+Dense (unadapted),evidence units,Q-small,four documents,100,74.00,per-question file
+Hybrid RRF,evidence units,Q-small,four documents,100,81.00,per-question file
+BM25 + cross-encoder,evidence units,Q-small,four documents,100,89.00,per-question file
+Hybrid + cross-encoder,evidence units,Q-small,four documents,100,87.00,per-question file
+QAHERRA (question-only),evidence units,Q-small,four documents,100,86.00,per-question file
+QAHERRA (option-conditioned),evidence units,Q-small,four documents,100,84.00,per-question file
+BM25,fixed-size chunks,Q-small,four documents,100,66.00,per-question file
+Dense (TSpec-LLM style),fixed-size chunks,Q-small,four documents,100,60.00,per-question file
+Chat3GPP style,fixed-size chunks,Q-small,four documents,100,53.00,per-question file
+BM25,evidence units,Q-small,full corpus,100,74.00,per-question file
+Dense (unadapted),evidence units,Q-small,full corpus,100,69.00,per-question file
+Hybrid RRF,evidence units,Q-small,full corpus,100,70.00,per-question file
+Fusion no reranking,evidence units,Q-small,full corpus,100,73.00,per-question file
+BM25 + cross-encoder,evidence units,Q-small,full corpus,100,75.00,per-question file
+QAHERRA (question-only),evidence units,Q-small,full corpus,100,78.00,per-question file
+QAHERRA (option-conditioned),evidence units,Q-small,full corpus,100,79.00,per-question file
+BM25,fixed-size chunks,Q-small,full corpus,100,66.00,per-question file
+Chat3GPP style,fixed-size chunks,Q-small,full corpus,100,52.00,per-question file
+BM25,evidence units,TeleQnA,full corpus,2000,73.60,per-question file
+Fusion no reranking,evidence units,TeleQnA,full corpus,2000,73.80,per-question file
+BM25 + cross-encoder,evidence units,TeleQnA,full corpus,2000,74.35,per-question file
+QAHERRA (question-only),evidence units,TeleQnA,full corpus,2000,74.20,per-question file
+QAHERRA (option-conditioned),evidence units,TeleQnA,full corpus,2000,74.85,per-question file
+BM25,fixed-size chunks,TeleQnA,full corpus,2000,75.60,per-question file
+BM25 (context capped at 10500),fixed-size chunks,TeleQnA,full corpus,2000,75.15,per-question file
+BM25 (deduplicated),evidence units,TeleQnA,full corpus,2000,75.30,per-question file

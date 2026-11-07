@@ -1,0 +1,4 @@
+gate,questions,accuracy,precision,recall,f1,specificity,roc_auc
+Keyword,300,72.33,35.71,13.33,19.42,92.00,
+Learned 5-fold OOF,300,86.00,68.97,80.00,74.07,88.00,0.8837
+

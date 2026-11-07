@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If this software or its released outputs are used, please cite the paper below."
+title: "QAHERRA reproducibility package"
+abstract: >-
+  Code, configuration, and verification scripts for the QAHERRA evaluation of
+  evidence representation, hybrid retrieval, and reranking for question
+  answering over 3GPP standards.
+type: software
+license: MIT
+authors:
+  - family-names: Ali
+    given-names: Sardar Jaffar
+    affiliation: "School of Computer Science, Kyungpook National University"
+  - family-names: Ali
+    given-names: Sardar Kazim
+    affiliation: "Institute of Management Sciences, Peshawar"
+  - family-names: Raza
+    given-names: Syed Muhammad
+    affiliation: "James Watt School of Engineering, University of Glasgow"
+  - family-names: Lee
+    given-names: Jong Taek
+    affiliation: "School of Computer Science, Kyungpook National University"
+  - family-names: Kim
+    given-names: Jeonggeun
+    affiliation: "School of Computer Science, Kyungpook National University"
+  - family-names: Tak
+    given-names: Byungchul
+    affiliation: "School of Computer Science, Kyungpook National University"
+preferred-citation:
+  type: article
+  title: >-
+    Scaling Evidence Retrieval for 3GPP Question Answering:
+    Provenance-Preserving Units, Hybrid Fusion, and Reranking
+  authors:
+    - family-names: Ali
+      given-names: Sardar Jaffar
+    - family-names: Ali
+      given-names: Sardar Kazim
+    - family-names: Raza
+      given-names: Syed Muhammad
+    - family-names: Lee
+      given-names: Jong Taek
+    - family-names: Kim
+      given-names: Jeonggeun
+    - family-names: Tak
+      given-names: Byungchul
+  journal: "Computer Standards & Interfaces"
+  year: 2026
