@@ -103,20 +103,7 @@ Set the API key only through the environment:
 export OPENAI_API_KEY="..."        # PowerShell: $env:OPENAI_API_KEY="..."
 ```
 
-## Two things worth knowing before comparing against an earlier draft
 
-**The four-document chunk baselines were defective and were rerun.** The chunk
-text was resolved through the corpus-wide chunk store with an index-local
-position, which returned text from unrelated specifications for every chunk.
-The chunk text is now read directly from the index metadata, and a startup
-assertion checks that SHA-1 of every chunk's text reproduces its recorded
-hash. `docs/CHUNK_LOOKUP_FIX.md` gives the diagnosis and the affected numbers;
-the corrected gap is smaller than the defective one.
-
-**Two cells of an earlier draft are not reported.** Dense retrieval over
-fixed-size chunks in the two full-corpus settings has no surviving
-per-question output, so those cells are blank rather than quoted from an
-aggregate. The same applies to the Telco-RAG adaptation.
 
 ## Reliability conventions
 
@@ -151,6 +138,6 @@ is archived alongside the paper and what to obtain from its original source.
 
 ## Licence
 
-MIT for the code; see `LICENSE`. The archived evidence collection derives from
+See `LICENSE`. The archived evidence collection derives from
 3GPP specifications and is redistributed only to the extent those
 specifications allow.
